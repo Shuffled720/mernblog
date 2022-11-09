@@ -3,8 +3,8 @@ import { connect } from 'mongoose';
 
 
 const Connection=async()=>{
-    // const DB=process.env.DATABASE;
-    const DB='mongodb://localhost:27017/mernblog'
+    const DB=process.env.DATABASE;
+    // const DB='mongodb://localhost:27017/mernblog'
     
 
     connect(DB,{useNewUrlParser:true}).then(()=>{
