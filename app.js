@@ -5,7 +5,7 @@ import bodyParser from 'body-parser'
 
 
 const app = express()
-const port = 5000 || process.env.PORT
+const PORT = process.env.PORT|| 5000
 
 
 app.use(cors())
@@ -17,6 +17,6 @@ import Connection from './db/conn.js'
 import router from './router/auth.js'
 app.use(router)
 
-app.listen(port, () => console.log(`app is listening on port ${port}!`))
+app.listen(PORT, () => console.log(`app is listening on PORT ${PORT}!`))
 
 Connection()
